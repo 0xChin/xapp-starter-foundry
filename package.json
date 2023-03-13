@@ -1,0 +1,16 @@
+{
+  "name": "xapp-starter-foundry",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:source": "source .env forge create --rpc-url $OPTIMISTIC_GOERLI_RPC_URL --private-key <your_private_key> src/MyContract.sol:MyContract"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
