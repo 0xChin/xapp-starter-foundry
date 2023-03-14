@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy:source": "source .env forge create --rpc-url $OPTIMISTIC_GOERLI_RPC_URL --private-key <your_private_key> src/MyContract.sol:MyContract"
+    "deploy:source": "source .env && forge create --rpc-url $OPTIMISTIC_GOERLI_RPC_URL --private-key $PRIVATE_KEY src/SourceGreeter.sol:SourceGreeter --constructor-args '0xFCa08024A6D4bCc87275b1E4A1E22B71fAD7f649' '0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1' --verify",
+    "deploy:destination": "source .env && forge create --rpc-url $OPTIMISTIC_GOERLI_RPC_URL --private-key $PRIVATE_KEY src/DestinationGreeter.sol:DestinationGreeter --constructor-args '0x68Db1c8d85C09d546097C65ec7DCBFF4D6497CbF'"
   },
   "keywords": [],
   "author": "",
